@@ -1,0 +1,26 @@
+-- Mock colloquium: Cinema dataset for Redis
+
+-- 1. Strings
+SET config:cinema_name "Kino Nova"
+SET stats:tickets_sold_today "120"
+SET seats:hall1:free "45"
+
+-- 2. Hashes
+HSET movie:101 title "Dune: Part Two" duration 166 genre "sci-fi" rating 8.6
+HSET movie:102 title "Oppenheimer" duration 180 genre "drama" rating 8.3
+HSET movie:103 title "Barbie" duration 114 genre "comedy" rating 6.9
+
+-- 3. List: online ticket orders
+LPUSH queue:orders "order_501: 2x Dune"
+LPUSH queue:orders "order_502: 1x Barbie"
+LPUSH queue:orders "order_503: 4x Oppenheimer"
+
+-- 4. Sets: movies watched by users
+SADD watched:user:1 "movie:101" "movie:102" "movie:103"
+SADD watched:user:2 "movie:102" "movie:104" "movie:105"
+
+-- 5. Sorted set: weekly ticket sales ranking
+ZADD ranking:weekly 870 "Dune" 1240 "Oppenheimer" 430 "Barbie" 655 "Wicked" 980 "Gladiator II"
+
+-- 6. Session with expiration
+SET session:user:1 "logged_in" EX 600

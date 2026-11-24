@@ -1,0 +1,52 @@
+--  Task 1
+set promo:summer 20_off ex 60
+exists promo:summer
+ttl promo:summer 
+
+-- Task 2
+get config:site_name
+mget user:101:name user:101:email user:101:status
+
+ttl promo:code:FALL2026
+expire session:token:usr101_abc 120
+set reset:code:usr101 883912 ex 30
+
+incr metrics:daily_active_users
+incrby metrics:daily_active_users 50
+decr metrics:available_course_slots
+
+setnx config:site_name "EduCloud Pro"
+exists promo:code:FALL2026
+del config:maintenance_mode
+
+--Task 3
+HGET user:1001 email
+
+hgetall user:1002
+
+hset user:1001 city Wroclaw
+hincrby user:1001 age 1
+hkeys user:1001
+
+lrange support:queue 0 -1
+rpop support:queue
+rpush support:queue "ticket_104: VIP payment issue"
+
+SISMEMBER tags:smartphone "electronics"
+sinter tags:laptop tags:smartphone
+sunion tags:laptop tags:clearance
+srem tags:laptop "sale"
+
+--Task 4
+zrange leaderboard:global 0 2 withscores
+zrevrange leaderboard:global 0 2 withscores
+zrevrank leaderboard:global "Player_Charlie"
+
+zscore leaderboard:global "Player_Bravo"
+zcount leaderboard:global 1500 2500
+zrevrangebyscore leaderboard:global 3500 2000  withscores
+
+zincrby leaderboard:global 400 "Player_Alpha"
+zscore leaderboard:global "Player_Alpha"
+zrevrank leaderboard:global "Player_Alpha"
+zrem leaderboard:global "Player_Echo"

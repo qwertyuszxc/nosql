@@ -1,8 +1,10 @@
+
 {
-    "productId": "56",
+    "$schema": "./product_schema.json",
+    "productId": 56,
     "title": "Laptop",
-    "price": 457,00,
+    "price": 0.01,
     "currency":"€",
-    "category": "computers",
-    "inStock": False
+    "category": "electronics",
+    "inStock": false
 }

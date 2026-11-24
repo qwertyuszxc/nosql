@@ -1,0 +1,37 @@
+{
+  "store_name": "store",
+  "isActive": true,
+  "lastUpdated": "2026-11-20T22:55:00Z",
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 16",
+      "price": 123,
+      "tags": ["phone", "mobile", "network"],
+      "specs": {
+        "manufacturer": "apple",
+        "warrantyMonths": 18
+      }
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15",
+      "price": 1234,
+      "tags": ["phone", "mobile", "network"],
+      "specs": {
+        "manufacturer": "apple",
+        "warrantyMonths": 24
+      }
+    },
+    {
+      "id": 2,
+      "name": "iPhone 17",
+      "price": 12345,
+      "tags": ["phone", "mobile", "network"],
+      "specs": {
+        "manufacturer": "apple",
+        "warrantyMonths": 32
+      }
+    }
+  ]
+}

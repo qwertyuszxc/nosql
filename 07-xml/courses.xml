@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<courses>
-  <course code="CS101">
-    <title>Introduction to Computer Science</title>
-    <instructor>John Doe</instructor>
-  </course>
-  <course code="CS102">
-    <title>Data Structures &amp; Algorithms</title>
-    <instructor>Jane Smith</instructor>
-  </course>
-</courses>
+<universityData university="Tech University" semester="5">
+  <courses>
+    <course code="CS101">
+      <title>Introduction to Computer Science</title>
+      <instructor>
+        <academicTitle>Doctor</academicTitle>
+        <email>DJohnDoe@gmail.com</email>
+      </instructor>
+      <enrolledStudents>
+        <student>
+          <studentId>1</studentId>
+          <finalGrade>5.0</finalGrade>
+        </student>
+      </enrolledStudents>
+    </course>
+
+    <course code="CS102">
+      <title>Data Structures &amp; Algorithms</title>
+      <instructor>
+        <academicTitle>Doctor</academicTitle>
+        <email>DJaneSmith@gmail.com</email>
+      </instructor>
+      <enrolledStudents>
+        <student>
+          <studentId>2</studentId>
+        </student>
+      </enrolledStudents>
+    </course>
+  </courses>
+</universityData>

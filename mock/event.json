@@ -1,0 +1,18 @@
+{
+  "$schema": "event_schema.json",
+  "eventId": "EVT-2026-01",
+  "title": "NoSQL Summit",
+  "date": "2026-12-05",
+  "online": false,
+  "venue": {
+    "name": "ICE Krakow",
+    "city": "Krakow"
+  },
+  "tickets": [
+    { "type": "standard", "price": 199.00, "available": 120 },
+    { "type": "vip", "price": 499.00, "available": 15 },
+    { "type": "student", "price": 0, "available": 40 }
+  ],
+  "speakers": ["Ann Lee", "Tom Kowalski"]
+}
+

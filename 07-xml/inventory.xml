@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <storeName>Store</storeName>
+    <isActive>true</isActive>
+    <lastUpdated>2026-11-21T00:00:00Z</lastUpdated>
+
+    <products>
+        <product>
+            <id>1</id>
+            <name>iPhone 16</name>
+            <price>123</price>
+            <tags>
+                <tag>network</tag>
+                <tag>mobile</tag>
+            </tags>
+            <specs>
+                <manufacturer>Apple</manufacturer>
+                <warrantyMonths>12</warrantyMonths>
+            </specs>
+        </product>
+
+        <product>
+            <id>2</id>
+            <name>Samsung 23</name>
+            <price>1234</price>
+            <tags>
+                <tag>Phone</tag>
+                <tag>Cool</tag>
+            </tags>
+            <specs>
+                <manufacturer>Samsung</manufacturer>
+                <warrantyMonths>18</warrantyMonths>
+            </specs>
+        </product>
+
+        <product>
+            <id>3</id>
+            <name>Blackberry phone</name>
+            <price>12345</price>
+            <tags>
+                <tag>Phone</tag>
+                <tag>mobile</tag>
+            </tags>
+            <specs>
+                <manufacturer>Blackberry</manufacturer>
+                <warrantyMonths>24</warrantyMonths>
+            </specs>
+        </product>
+    </products>
+</inventory>

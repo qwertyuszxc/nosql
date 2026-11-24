@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event id="EVT-2026-01" online="false">
+  <title>NoSQL Summit</title>
+  <date>2026-12-05</date>
+  <venue>
+    <name>ICE Krakow</name>
+    <city>Krakow</city>
+  </venue>
+  <tickets>
+    <ticket type="standard">
+      <price>199.00</price>
+      <available>120</available>
+    </ticket>
+    <ticket type="vip">
+      <price>499.00</price>
+      <available>15</available>
+    </ticket>
+    <ticket type="student">
+      <price>0</price>
+      <available>40</available>
+    </ticket>
+  </tickets>
+  <speakers>
+    <speaker>Ann Lee</speaker>
+    <speaker>Tom Kowalski &amp; Partners</speaker>
+  </speakers>
+  <note>Early bird tickets until November 30</note>
+</event>

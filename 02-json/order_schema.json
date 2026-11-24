@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type":"object",
+    "properties": {
+        "orderId": {"type":"string"},
+        "customer": {
+            "type":"object",
+            "properties": {
+                "fullName":{"type":"string"},
+                "email":{"type":"string", "format": "email"}
+            },
+            "required": ["fullName","email"]
+        },
+        "items":{
+            "type":"array",
+            "items": {"type":"object",
+                "properties": {
+                    "sku":{"type":"string"},
+                    "quantity":{"type":"integer","minimum": 1},
+                    "unitPrice":{"type":"number","exclusiveMinimum": 0}
+                },
+                "required": ["sku","quantity","unitPrice"]
+            },
+            "minItems":1
+        },
+        "status":{"type":"string", "enum": ["pending","shipped","delivered","cancelled"]}
+    }, 
+    "additionalProperties": false
+}

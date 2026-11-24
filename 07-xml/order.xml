@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="order_schema.xsd">
+    <orderId>ORD-2026-001</orderId>
+    <customer>
+        <fullName>John Doe</fullName>
+        <email>john.doe@example.com</email>
+    </customer>
+    <items>
+        <item>
+            <sku>LAP-001</sku>
+            <quantity>1</quantity>
+            <unitPrice>2999.99</unitPrice>
+        </item>
+        <item>
+            <sku>MOUSE-05</sku>
+            <quantity>2</quantity>
+            <unitPrice>49.90</unitPrice>
+        </item>
+    </items>
+    <status>pending</status>
+    <discountCode>SAVE10</discountCode>
+</order>

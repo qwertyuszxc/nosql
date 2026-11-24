@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "eventId": { "type": "string", "pattern": "^EVT-[0-9]{4}-[0-9]{2}$" },
+    "title": { "type": "string", "minLength": 5 },
+    "date": { "type": "string", "format": "date" },
+    "online": { "type": "boolean" },
+
+    "venue": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "city": { "type": "string" }
+      },
+      "required": ["name", "city"]
+    },
+
+    "tickets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["standard", "vip", "student"] },
+          "price": { "type": "number", "minimum": 0 },
+          "available": { "type": "integer", "minimum": 0 }
+        },
+        "required": ["type", "price", "available"]
+      }
+    },
+
+    "speakers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["eventId", "title", "date", "venue", "tickets"],
+  "additionalProperties": false
+}

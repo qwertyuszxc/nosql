@@ -1,0 +1,29 @@
+get config:cinema_name
+incrby stats:tickets_sold_today 3
+decrby seats:hall1:free 3
+
+hmget movie:101 "title" "duration"
+HSET movie:103 rating 7.1 language "EN"
+hvals movie:102
+
+
+LRANGE queue:orders 0 -1
+rpop queue:orders
+lpush queue:orders "order_504: 1x Wicked"
+LLEN queue:orders
+
+sinter watched:user:1 watched:user:2
+sdiff watched:user:1 watched:user:2
+SISMEMBER watched:user:2 "movie:101"
+
+zrevrange ranking:weekly 0 2 withscores
+zrevrank ranking:weekly "Wicked"
+zincrby ranking:weekly 150 "Barbie"
+
+zrevrangebyscore ranking:weekly 1000 600 withscores
+
+
+ttl session:user:1
+expire session:user:1 300
+setnx config:maintenance "on"
+persist session:user:1
